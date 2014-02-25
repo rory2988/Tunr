@@ -3,7 +3,7 @@ class UserPermission < ActiveRecord::Base
   belongs_to :playlist
 
   validates :playlist, :user, presence: true
-  validate :playlist_can_only_be_accessed_by_permitted_users
+ # validate :playlist_can_only_be_accessed_by_permitted_users
 
   private
 

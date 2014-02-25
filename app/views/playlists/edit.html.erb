@@ -1,0 +1,7 @@
+<h3>Users that have access to this playlist</h3>>
+<%= form_for [@user, @playlist] do |f| %>
+  <%= f.label :user_permissions %>
+  <%= f.select :user_permissions, options_from_collection_for_select(@users, :id, :first_name), {}, { multiple: true }
+
+  <%= f.submit "Update" %>
+<% end %>

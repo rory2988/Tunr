@@ -38,10 +38,10 @@ describe "a user can share a playlist" do
   end
 
   let(:playlist) do
-    Playlist.create({
-      title: "Cool Playlist"
-      user_id: user.id
-      created_at: Time.now
+    Playlist.create!({
+      title: "Cool Playlist",
+      user_id: user.id,
+      created_at: Time.now,
       updated_at: Time.now
     })
   end
@@ -53,6 +53,7 @@ describe "a user can share a playlist" do
     # Workflow for feature
     visit user_path(user)
     click_link "Share Playlist"
+
 
 end
   def login(user)
